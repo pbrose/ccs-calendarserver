@@ -85,7 +85,7 @@ def git_info(wc_path):
 
     try:
         tags = subprocess.check_output(
-            ["git", "describe", "--exact-match", "HEAD"],
+            ["git", "describe", "--tags", "--exact-match", "HEAD"],
             stderr=subprocess.STDOUT,
         )
     except OSError as e:
